@@ -1,6 +1,12 @@
-steps:
-  - name: Multi-line bash
-    run: |
-      echo "I am"
-      echo "a multi-line"
-      echo "script."
+ name: My First Workflow
+
+    on: [push] # Triggers the workflow on every push to any branch
+
+    jobs:
+      build:
+        runs-on: ubuntu-latest # Specifies the runner environment
+
+        steps:
+          - uses: actions/checkout@v4 # Checks out your repository code
+          - name: Run a simple script
+            run: echo "Hello, GitHub Actions!"
