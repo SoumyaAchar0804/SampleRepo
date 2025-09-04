@@ -1,12 +1,6 @@
-on: [push]
-
-jobs:
-  build:
-  name: Hello world
-  runs-on: ubuntu-latest
-  steps:
-  - uses: actions/checkout@v2
-  - name: Write a multi-line message
+steps:
+  - name: Multi-line bash
     run: |
-      echo This demo file shows a 
-      echo very basic and easy-to-understand workflow.
+      echo "I am"
+      echo "a multi-line"
+      echo "script."
